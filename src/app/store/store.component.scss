@@ -1,0 +1,68 @@
+.storeFront {
+    background-color:white;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 120px;
+    width: 1000px;
+    justify-content: center;
+    padding: 50px 20px;
+    border-radius: 20px;
+    
+    .item {
+        background: white;
+        border-radius: 4px;
+        padding: 20px;
+        margin: 5px;
+        height: 425px;
+        width: 250px;
+        border: 1px solid black;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
+        
+        img {
+            margin: 0 auto 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;padding: 0;
+            
+            
+            li {
+                text-align: center;
+                margin-bottom: 7px;
+                font-size: 11px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            
+        }
+        .itemFooter {
+            
+            width: 100%;
+            height: 80px;
+            display: flex;
+            margin-bottom: 20px;
+            
+            button {
+                margin: 0 auto;
+                background: white;
+                text-decoration: none;
+                border: 1px solid black;
+                border-radius: 5px;
+                width: 50px;
+                height: 45px;
+                align-self: flex-end;
+            }
+            
+            button:hover {
+                background: rgb(43, 43, 43);
+                color: white;
+                transition: ease 400ms;
+            }
+        }
+    }
+}
+
+
+

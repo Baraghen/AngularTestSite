@@ -1,0 +1,35 @@
+<div class="userPostContainer">
+    <post-form (postEvent)="receivePost($event)"></post-form>
+    <div class="outputContainer">
+        <div *ngIf="submittedPost" >
+            <div class="postPreviewOutput">
+                <h2>Preview of your post:</h2>
+                <ul>
+                    <li>UserId: {{ submittedPost.userIdControl }}</li>
+                    <li>Id: {{ submittedPost.id }}</li>
+                    <li>Title: {{ submittedPost.titleControl }}</li>
+                    <li>Body: {{ submittedPost.bodyControl }}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="buttonContainer">
+            <mat-slider
+            [max]="100"
+            [min]="1"
+            [thumbLabel]="true"
+            [(ngModel)]="sliderValue"
+            ></mat-slider>
+            <button mat-flat-button color="accent" (click)="getPostList()">Get list of posts from API</button>
+        </div>
+        <div *ngIf="postList" class="postListOutput">
+            <div *ngFor="let post of postList" class="apiPost">
+                <ul>
+                    <li>UserId: {{ post.userId }}</li>
+                    <li>Id: {{ post.id }}</li>
+                    <li>Title: {{ post.title }}</li>
+                    <li>Body: {{ post.body }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

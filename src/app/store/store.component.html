@@ -1,0 +1,14 @@
+<div *ngIf="albums" class="storeFront">
+    <div *ngFor="let album of albums.items; let i = index" class="{{ i }} item">
+        <img src="../assets/{{ album.art }}">
+        <ul>
+            <li>{{ album.artist }}</li>
+            <li>{{ album.title }}</li>
+            <li>År: {{ album.year }}</li>
+            <li>{{ album.price }} kr</li>
+        </ul>
+        <div class="itemFooter">
+            <button mat-stroked-button color="accent">Buy</button>
+        </div>
+    </div>
+</div>

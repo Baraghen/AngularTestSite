@@ -1,0 +1,63 @@
+.userPostContainer {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+
+    .outputContainer {
+
+        display: flex;
+        justify-content: center;
+        flex-flow: column wrap;
+
+        .postPreviewOutput {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            width: 368px;
+            background-color: white;
+            border: 1px solid rgb(216, 216, 216);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            padding: 20px;
+            
+            ul {
+                list-style: none;
+                padding: 0;
+    
+                li {
+                    padding: 5px;
+                }
+            }
+        }
+
+        .buttonContainer {
+            margin: 10px 0;
+            display: flex;
+            flex-flow: column wrap;
+        }
+    
+        .postListOutput {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            
+            .apiPost {
+                width: 368px;
+                padding: 20px;
+                margin-bottom: 10px;
+                background-color: white;
+                border: 1px solid rgb(216, 216, 216);
+                border-radius: 10px;
+            }
+    
+            ul {
+                list-style: none;
+                padding: 0;
+    
+                li {
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}

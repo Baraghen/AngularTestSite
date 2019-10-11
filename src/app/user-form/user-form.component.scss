@@ -1,0 +1,36 @@
+.userFormContainer {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+
+    form {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        width: 368px;
+        background-color: white;
+        border: 1px solid rgb(216, 216, 216);
+        border-radius: 10px;
+        padding: 20px;
+
+        mat-form-field {
+            margin-bottom: 20px;
+        }
+    }
+
+    .createdUserList {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        width: 368px;
+        background-color: white;
+        border: 1px solid rgb(216, 216, 216);
+        border-radius: 10px;
+        padding: 20px;
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+    }
+}

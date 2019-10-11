@@ -1,0 +1,25 @@
+<form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+
+    <h2>Post Stuff!</h2>
+    <mat-form-field appearance="outline">
+        <mat-label>User ID</mat-label>
+        <input matInput placeholder="User ID" formControlName='userIdControl'>
+        <mat-error *ngIf="userIdControl.invalid">{{ getErrorMessageUserId() }}</mat-error>
+        <mat-hint>Numbers only</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="Title" formControlName='titleControl'>
+        <mat-error *ngIf="titleControl.invalid">{{ getErrorMessageTitle() }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Body</mat-label>
+        <textarea matInput placeholder="Write some stuff here" formControlName='bodyControl'></textarea>
+        <mat-error *ngIf="bodyControl.invalid">{{ getErrorMessageBody() }}</mat-error>
+    </mat-form-field>
+
+    <button mat-stroked-button color="accent" type="submit" [disabled]="postForm.invalid">Submit</button>
+
+</form>
