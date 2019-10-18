@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 import { DataService } from '../data.service';
-import { Post } from '../post';
+import { Post } from '../../assets/class/post';
 
 @Component({
   selector: 'post-form',

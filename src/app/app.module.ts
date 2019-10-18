@@ -9,6 +9,8 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatRadioModule } from '@angular/material/radio';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MatTableModule } from '@angular/material/table';
+import { MatSelectModule } from '@angular/material/select';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +21,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { UserPostsComponent } from './user-posts/user-posts.component';
 import { PostFormComponent } from './post-form/post-form.component';
+import { TablesComponent } from './tables/tables.component';
+import { TableFormComponent } from './table-form/table-form.component';
 
 
 @NgModule({
@@ -29,7 +33,9 @@ import { PostFormComponent } from './post-form/post-form.component';
     UserFormComponent,
     NavbarComponent,
     UserPostsComponent,
-    PostFormComponent
+    PostFormComponent,
+    TablesComponent,
+    TableFormComponent
   ],
   imports: [
     BrowserModule,
@@ -43,10 +49,12 @@ import { PostFormComponent } from './post-form/post-form.component';
     MatRadioModule,
     ReactiveFormsModule,
     FormsModule,
-    MatSliderModule
+    MatSliderModule,
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [
-    DataService
+    DataService,
   ],
   bootstrap: [AppComponent]
 })
