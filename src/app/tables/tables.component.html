@@ -1,0 +1,37 @@
+<div class="tableForm">
+    <table-form></table-form>
+</div>
+
+<div class="tableContainer">
+    <table mat-table [dataSource]="dataSource">
+    
+        <ng-container matColumnDef="person">
+            <th mat-header-cell *matHeaderCellDef> Person </th>
+            <td mat-cell *matCellDef="let user"> {{user.personControl}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="goals">
+            <th mat-header-cell *matHeaderCellDef> Goals </th>
+            <td mat-cell *matCellDef="let user"> {{user.goalsControl}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="labels">
+            <th mat-header-cell *matHeaderCellDef> Labels </th>
+            <td mat-cell *matCellDef="let user"> {{user.labelsControl}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="engagement">
+            <th mat-header-cell *matHeaderCellDef> Engagement </th>
+            <td mat-cell *matCellDef="let user"> {{user.engagementControl}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="lastSeen">
+            <th mat-header-cell *matHeaderCellDef> Last Seen </th>
+            <td mat-cell *matCellDef="let user"> {{user.lastSeenControl}} </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+    </table>
+</div>

@@ -1,0 +1,10 @@
+.tableContainer {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+
+    table {
+        width: 65%;
+        box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+      }
+}

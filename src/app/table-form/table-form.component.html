@@ -1,0 +1,39 @@
+<div class="tableFormContainer">
+    <form [formGroup]="tableForm" (ngSubmit)="onSubmit()">
+    
+        <h2>New Entry</h2>
+        <mat-form-field appearance="outline">
+            <mat-label>Person</mat-label>
+            <input matInput placeholder="Person" formControlName='personControl'>
+            <mat-error *ngIf="personControl.invalid">{{ getErrorMessagePerson() }}</mat-error>
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Goals</mat-label>
+            <input matInput placeholder="Goals" formControlName='goalsControl'>
+            <mat-error *ngIf="goalsControl.invalid">{{ getErrorMessageGoals() }}</mat-error>
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Labels</mat-label>
+            <mat-select formControlName='labelsControl'>
+                <mat-option *ngFor="let label of labels" [value]="label.value">
+                    {{label.viewValue}}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="labelsControl.invalid">{{ getErrorMessageLabels() }}</mat-error>
+        </mat-form-field>
+    
+        <label>Engagement</label>
+        <mat-radio-group aria-label="Select Engagement Rate" formControlName='engagementControl'>
+            <mat-radio-button value="1">1</mat-radio-button>
+            <mat-radio-button value="2">2</mat-radio-button>
+            <mat-radio-button value="3">3</mat-radio-button>
+            <mat-radio-button value="4">4</mat-radio-button>
+            <mat-radio-button value="5">5</mat-radio-button>
+        </mat-radio-group>
+        
+        <button mat-stroked-button color="accent" type="submit" [disabled]="tableForm.invalid">Submit</button>
+    
+    </form>
+</div>
